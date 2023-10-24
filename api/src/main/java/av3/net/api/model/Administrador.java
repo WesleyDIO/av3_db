@@ -1,5 +1,6 @@
 package av3.net.api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -18,6 +19,7 @@ import java.util.List;
 @Table(name = "tb_administrador")
 @ToString(callSuper = true)
 public class Administrador extends Usuario {
+    @JsonIgnore
     @OneToMany( mappedBy = "chefe")
     private List<Atendente> atendentes;
 }

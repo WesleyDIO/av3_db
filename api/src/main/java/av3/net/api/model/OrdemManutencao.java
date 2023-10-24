@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "tb_ordemManutencao")
 public class OrdemManutencao extends OrdemServico{
+
     private String dataManutencao;
     private String equipamento;
 
