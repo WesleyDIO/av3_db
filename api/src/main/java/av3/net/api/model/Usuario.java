@@ -23,6 +23,4 @@ public abstract class Usuario {
    @Column(name = "username", unique = true, nullable = false)
    protected String nome;
 
-   private static List<Usuario> usuarios = new LinkedList<>();
-
 }

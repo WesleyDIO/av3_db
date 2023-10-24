@@ -1,10 +1,7 @@
 package av3.net.api.model;
 
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +15,8 @@ import java.util.List;
 @Table(name = "tb_atendente")
 
 public class Atendente extends Usuario {
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @ManyToOne
+    private Administrador chefe;
+    @OneToMany(mappedBy = "responsavel")
     private List<OrdemServico> ordens;
 }

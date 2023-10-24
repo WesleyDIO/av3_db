@@ -16,11 +16,11 @@ public abstract class OrdemServico {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Integer num;
-    private String descricao;
-    private String status;
+    protected Integer num;
+    protected String descricao;
+    protected String status;
     @ManyToOne
-    private Solicitante solicitante;
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    private Atendente responsavel;
+    protected Solicitante solicitante;
+    @ManyToOne
+    protected Atendente responsavel;
 }

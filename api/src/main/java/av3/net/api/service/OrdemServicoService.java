@@ -17,13 +17,11 @@ public class OrdemServicoService {
         return ordemServicoRepository.findAll();
     }
 
-
     public void deletar( Integer id){
         ordemServicoRepository.deleteById(id);
     }
 
-
-    public void salvar( OrdemServico ordemManutencao){
+    public void salvar(OrdemServico ordemManutencao){
         ordemServicoRepository.save(ordemManutencao);
     }
 

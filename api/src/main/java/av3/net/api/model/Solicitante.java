@@ -17,6 +17,6 @@ import java.util.List;
 @Table(name = "tb_solicitante")
 
 public class Solicitante extends Usuario {
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "solicitante")
     private List<OrdemServico> ordens;
 }

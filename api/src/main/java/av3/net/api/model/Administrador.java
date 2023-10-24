@@ -18,6 +18,6 @@ import java.util.List;
 @Table(name = "tb_administrador")
 @ToString(callSuper = true)
 public class Administrador extends Usuario {
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany( mappedBy = "chefe")
     private List<Atendente> atendentes;
 }
